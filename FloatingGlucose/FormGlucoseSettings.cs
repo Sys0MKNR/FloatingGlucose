@@ -68,6 +68,8 @@ namespace FloatingGlucose
             this.txtBackColor.Text = Default.BackgroundColorHex;
             this.txtBackImage.Text = Default.BackgroundImage;
             this.cbImageLayouts.SelectedItem = Default.BackgroundImageLayout;
+            this.chkBackgroundTransparent.Checked = Default.BackgroundTransparent;
+
             //this is the default in the settings file
             //override it so it makes sense
             if (nsurl == "https://...")
@@ -254,6 +256,8 @@ namespace FloatingGlucose
             Default.DataSourceFullName = (this.cbDataSource.SelectedItem as DataSourceInfo).FullName;
 
             Default.BackgroundImageLayout = (cbImageLayouts.SelectedItem as String) ?? "Stretch";
+
+            Default.BackgroundTransparent = this.chkBackgroundTransparent.Checked;
 
             DataSourceInfo plugin;
 

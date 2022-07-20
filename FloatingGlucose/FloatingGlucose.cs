@@ -639,6 +639,17 @@ namespace FloatingGlucose
 
             this.BackColor = Default.BackgroundColorHex.FromHexStringToColor();
             this.setBackgroundImage();
+
+
+            if (Default.BackgroundTransparent)
+            {
+                this.BackColor = Color.Black;
+                this.TransparencyKey = Color.Black;
+            } else
+            {
+                this.TransparencyKey = Color.Empty;
+            }
+
             this.lblRawDelta.Visible =
             this.lblRawBG.Visible = Default.EnableRawGlucoseDisplay;
 
